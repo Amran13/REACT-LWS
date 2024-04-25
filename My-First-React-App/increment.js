@@ -1,8 +1,17 @@
+
+
+
 console.log(React)
 console.log(ReactDOM)
 
-const myElement = React.createElement('div', null, React.createElement('p', null, 'My p tag'))
+const MyElement = () => {
+    const reactState = React.useState(0)
+    console.log(reactState)
+    return (
+        <div> Hello worlddd </div>
+    )
+}
 
 const domContainer = document.querySelector('#root');
 
-ReactDOM.render(myElement, domContainer)
+ReactDOM.render(<MyElement></MyElement>, domContainer)
